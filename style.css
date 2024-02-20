@@ -2,7 +2,7 @@
   padding:0;
   margin:0;
   box-sizing: border-box;
-
+  
 }
 html, body{
     height: 100%;
@@ -11,20 +11,31 @@ html, body{
 #main{
     height: 100%;
     width:100%;
-    background-color: 	rgb(217, 255, 102);  
+    background-color:rgb(99, 188, 233);
     justify-content:center;/*horizontal alignment*/
-    display:flex;
     align-items:center;/*vertical alignment*/
+}
+#heading{
+    justify-content:center;
+    display: flex;
+    padding-top:25px;
+    font-family: cursive;
+    font-size:30px;
+}
+h4{
+    font-size:20px;
+    font-style: italic;
 }
 #squarebox{
     background-color: white;  
-    height:90%;
-    width:80%;
+    height:83%;
+    width:85%;
+    margin: 15px 0px 0px 100px;
     overflow:hidden;
     border-radius:10px;
 }
 #header{
-    background-color: rgb(20,105,40);  
+    background-color:rgb(45, 134, 89);  
     height:90px;
     width:100%;
     align-items:center;
@@ -35,12 +46,13 @@ html, body{
 }
 .box{
 background-color:white;
-padding:10px 15px;
-border-radius:5px;
+padding:8px 15px;
+border-radius:15px;
 border: 1px solid black;
 color:rgb(18,119,57);
 font-weight:bold;
-font-size:25px;
+font-family: cursive;
+font-size:30px;
 }
 .elem{
 gap:10px;
@@ -62,7 +74,7 @@ align-items:center;
 border-radius:50%;
 color:white;
 //padding:5px;
-background-color:rgb(217, 102, 255);
+background-color:rgb(64, 191, 128);
 border: 1px solid black;
 align-items:center;
 display:flex;
@@ -78,7 +90,7 @@ width:30px;
 height:50px;
 width:130px;
 color:white;
-background-color:green;
+background-color:rgb(45, 134, 89);
 border: 1px solid black;
 align-items:end;
 justify-content:center;

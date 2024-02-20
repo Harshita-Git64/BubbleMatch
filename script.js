@@ -2,7 +2,7 @@
 
 function makebubble(){
     let bbl="";
-    for(var i = 1; i <=216;i++)
+    for(var i = 1; i <=224;i++)
     {
     var val=Math.floor(Math.random()*10);
     bbl+=`<div id="bubble">${val}</div>`;
@@ -22,9 +22,7 @@ function timerinterval()
         else{
             clearInterval(storeval);
             document.getElementById("bdy").innerHTML=`
-            <h2> Game Over</h2>
             <button id=btn onClick= "document.location.reload()">Play Again !!</button>`;
-            
             //document.getElementById("btn").addEventListener("click",document.location.reload())
           //  document.getElementById("btn").onclick=document.location.reload();
            
@@ -38,29 +36,32 @@ function randomHitvalue(){
     document.getElementById("hitval").innerHTML=num;
 }
 var scores=0;
+
 function increasescore(){
-   
     scores+=10;
-    document.getElementById("sccr").innerHTML=scores;;
+    document.getElementById("sccr").innerHTML=scores;
 }
 
-
-
-   document.getElementById("bdy").addEventListener("click",function(getnum){
+   document.getElementById("bdy").addEventListener("click",function(getnum)
+   {
     var clickednum=Number(getnum.target.textContent);
+   
+if(getnum.target.id==="bubble")
+{
     if(num === clickednum)
     {
      increasescore();
      randomHitvalue();
      makebubble();
     }
-   });
-
-  
-  
-
+    else{
+        scores-=10;
+        document.getElementById("sccr").innerHTML=scores;
+    }
+}
+}
+);
 
 timerinterval();
 randomHitvalue();
 makebubble();
-
