@@ -6,7 +6,7 @@ function makebubble() {
   }
   document.querySelector("#bdy").innerHTML = bbl;
 }
-var counting = 1;
+var counting = 60;
 function timerinterval() {
   var storeval = setInterval(function () {
     if (counting > 0) {
